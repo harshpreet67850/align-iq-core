@@ -1,12 +1,13 @@
 import { Link, Outlet, useRouterState, createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect } from "react";
 import {
-  LayoutDashboard, Target, Users, BarChart3, Settings, LogOut, Bell, Search, Sparkles,
+  LayoutDashboard, Target, Users, BarChart3, Settings, LogOut, Search, Sparkles,
 } from "lucide-react";
 import { clearSession } from "@/lib/auth";
 import { useSession } from "@/lib/use-session";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { NotificationsCenter } from "@/components/notifications-center";
 
 export const Route = createFileRoute("/_app")({
   component: AppLayout,
@@ -114,10 +115,7 @@ function AppLayout() {
                 className="pl-9 bg-background/50 border-border/60"
               />
             </div>
-            <button className="relative h-10 w-10 rounded-xl hover:bg-foreground/5 grid place-items-center">
-              <Bell className="h-4 w-4" />
-              <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-destructive" />
-            </button>
+            <NotificationsCenter />
             {user && (
               <div className="hidden sm:flex items-center gap-2 pl-3 border-l border-border/60">
                 <div className="text-right">
