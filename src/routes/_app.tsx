@@ -1,7 +1,14 @@
 import { Link, Outlet, useRouterState, createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect } from "react";
 import {
-  LayoutDashboard, Target, Users, BarChart3, Settings, LogOut, Search, Sparkles,
+  LayoutDashboard,
+  Target,
+  Users,
+  BarChart3,
+  Settings,
+  LogOut,
+  Search,
+  Sparkles,
 } from "lucide-react";
 import { clearSession } from "@/lib/auth";
 import { useSession } from "@/lib/use-session";
@@ -51,7 +58,9 @@ function AppLayout() {
           </div>
           <div>
             <div className="font-display font-bold tracking-tight">AlignIQ</div>
-            <div className="text-[11px] text-muted-foreground uppercase tracking-wider">Enterprise</div>
+            <div className="text-[11px] text-muted-foreground uppercase tracking-wider">
+              Enterprise
+            </div>
           </div>
         </div>
 
@@ -82,7 +91,11 @@ function AppLayout() {
             <p className="text-xs mt-1.5 opacity-90 leading-snug">
               Generate quarterly OKR suggestions from your team's trajectory.
             </p>
-            <Button size="sm" variant="secondary" className="mt-2 w-full bg-background/80 text-foreground hover:bg-background">
+            <Button
+              size="sm"
+              variant="secondary"
+              className="mt-2 w-full bg-background/80 text-foreground hover:bg-background"
+            >
               Try now
             </Button>
           </div>
@@ -95,9 +108,15 @@ function AppLayout() {
             </div>
             <div className="flex-1 min-w-0">
               <div className="text-sm font-semibold truncate">{user.name}</div>
-              <div className="text-[11px] text-muted-foreground capitalize">{user.role} · {user.team}</div>
+              <div className="text-[11px] text-muted-foreground capitalize">
+                {user.role} · {user.team}
+              </div>
             </div>
-            <button onClick={logout} className="h-9 w-9 grid place-items-center rounded-lg hover:bg-foreground/5 text-muted-foreground" aria-label="Sign out">
+            <button
+              onClick={logout}
+              className="h-9 w-9 grid place-items-center rounded-lg hover:bg-foreground/5 text-muted-foreground"
+              aria-label="Sign out"
+            >
               <LogOut className="h-4 w-4" />
             </button>
           </div>
