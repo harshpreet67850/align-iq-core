@@ -11,7 +11,7 @@ interface Props {
 export function StatCard({ label, value, delta, trend, hint }: Props) {
   const isUp = trend === "up";
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-950/85 p-5 text-white shadow-lg group">
+    <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-950/85 p-5 text-black shadow-lg group">
       <div className="absolute -top-12 -right-12 h-32 w-32 rounded-full bg-[image:var(--gradient-primary)] opacity-[0.07] group-hover:opacity-15 transition-opacity" />
       <div className="text-xs font-medium uppercase tracking-wider text-slate-400">{label}</div>
       <div className="mt-2 flex items-baseline gap-2">

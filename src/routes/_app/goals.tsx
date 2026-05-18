@@ -38,7 +38,7 @@ const statusStyles: Record<GoalStatus, string> = {
 };
 
 const darkFieldClass =
-  "w-full rounded-md border border-white/10 bg-gray-800 px-3 py-2 text-white placeholder-gray-400 outline-none transition focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/30";
+  "w-full rounded-md border border-white/10 bg-gray-800 px-3 py-2 text-black placeholder-gray-400 outline-none transition focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/30";
 
 export const Route = createFileRoute("/_app/goals")({
   component: GoalsPage,
